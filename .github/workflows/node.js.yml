@@ -31,9 +31,9 @@ jobs:
     - run: npm run build --if-present
     - uses: actions/checkout@v3
     - run: |
-        cat ls 
+        ls >
         cd dist 
-        cat ls
+        ls >
         cat dist/messaging-application/index.html
         mkdir dist
         git config user.name github-actions
