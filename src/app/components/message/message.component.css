@@ -1,0 +1,14 @@
+.chatbox{
+    border: 1px solid blue;
+    min-width: 500px;
+    max-width: 500px;
+    height: auto;
+    text-align: center;
+
+}
+.messageleft{
+    text-align: left;
+}
+.messageright{
+    text-align: right;
+}

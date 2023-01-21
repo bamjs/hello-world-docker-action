@@ -1,0 +1,50 @@
+
+  <head>
+    <style>
+      table {
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      td {
+        border: 1px solid #999999;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+     #hellovideo
+      style="height: 360px; width: 640px; max-width: 100%;"
+    ></div>
+    <script src=sockjsurl></script>
+    <script>
+    </script>
+    <table>
+      <tr>
+        <th>Chapter</th>
+        <th>Timestamp</th>
+        <th></th>
+      </tr>
+      <tr>
+        <td>Chapter 1</td>
+        <td>00:00</td>
+        <td>
+          <button id="part1" (click)="seek(100)">Seek</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Chapter 2</td>
+        <td>03:00</td>
+        <td>
+          <button id="part2" (click)="seek(200)">Seek</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Chapter 3</td>
+        <td>05:00</td>
+        <td>
+          <button id="part3" (click)="seek(300)">Seek</button>
+        </td>
+      </tr>
+    </table>
+  </body>

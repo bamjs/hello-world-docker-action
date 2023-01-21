@@ -1,0 +1,28 @@
+<h1 *ngFor="let m of    (updatemessage()|async) ; trackBy:trackitem">
+
+    <!-- {{m|json}} -->
+    <div class="chatbox">
+        <div *ngIf="m.type=='JOIN'">
+            <h6>{{m.sender}} has joined the chatbox</h6>
+        </div>
+        <div *ngIf="m.type=='LEFT'">
+            <h6>{{m.sender}} left the conversation</h6>
+        </div>
+        <div *ngIf="m.type=='CHAT'" [ngClass]="{'messageleft':m.sender==username ? 'messageleft':'messageright' }">
+            <h4>{{m.sender}} :<h5>{{m.content}}</h5></h4>
+        </div>
+    </div>
+</h1>
+<!-- <div>{{updatemessage()|async|json}}</div>
+<div>{{messageArray() |json}}</div> -->
+<mat-grid-list cols="12">
+    <form>
+
+        <mat-grid-tile colspan="9">
+            <mat-form-field appearance="outline" style="width: 300px;">
+                <input matInput placeholder="hai" type="text" name="message" #messageInput [(ngModel)]="message">
+            </mat-form-field>
+            <button type="button" (click)="sendmessage()">send</button>
+        </mat-grid-tile>
+    </form>
+</mat-grid-list>
