@@ -43,7 +43,7 @@ jobs:
         git diff
         git status
         echo "adding the dist folder"
-        git add dist
+        git add --force dist
         git commit -m "build completed"
         git push
     - name: Archive production artifacts
